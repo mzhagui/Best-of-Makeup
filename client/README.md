@@ -25,31 +25,26 @@ Airtable is returning the data for this base as follows:
 
 ```
 {
-    "records": [
-        {
-            "id": "recjruUyWVhOO6mJP",
+            "id": "recdDSCCFqB3kNbXF",
             "fields": {
-                "title": "The Godfather",
-                "rating": 5,
-                "opinion": "A classic cinematic theme executed perfectly. The acting, spearheaded by Marlon Brando, made the story memorable. "
+                "productName": "Airspun Loose Face Powder",
+                "Category": "Powder",
+                "review": "Best translucent powder. Full day coverage.",
+                "rating": 5
             },
-            "createdTime": "2020-10-09T00:27:04.000Z"
+            "createdTime": "2021-09-16T22:08:34.000Z"
         },
         {
-            "id": "rec85tP6Ra4a3JiKL",
+            "id": "recp4xgK1dWzbJoH3",
             "fields": {
-                "title": "Independence Day",
-                "rating": 3,
-                "opinion": "This movie was not very good in terms of cinematic quality, however it smells of nostalgia which I can't help but enjoy every July 4th. "
+                "Category": "Primer",
+                "productName": "Maybelline Face Studio Master Prime Primer",
+                "rating": 4,
+                "review": "Covers pores, awesome primer. Good for combination skin (oily and dry skin) "
             },
-            "createdTime": "2020-10-09T00:27:04.000Z"
-        }
-    ],
-    "offset": "rec85tP6Ra4a3JiKL"
-}
-
-```
-
+            "createdTime": "2021-09-16T22:08:34.000Z"
+        },
+,,,
 ### MVP/PostMVP
 
 #### MVP
