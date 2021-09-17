@@ -1,4 +1,3 @@
-
 ## Title
 
 Best of Makeup
@@ -24,31 +23,28 @@ https://airtable.com/shrTv92TftYf4SVZZ
 Airtable is returning the data for this base as follows:
 
 ```
-{
-    "records": [
+"records": [
         {
-            "id": "recjruUyWVhOO6mJP",
+            "id": "recdDSCCFqB3kNbXF",
             "fields": {
-                "title": "The Godfather",
-                "rating": 5,
-                "opinion": "A classic cinematic theme executed perfectly. The acting, spearheaded by Marlon Brando, made the story memorable. "
+                "productName": "Airspun Loose Face Powder",
+                "Category": "Powder",
+                "review": "Best translucent powder. Full day coverage.",
+                "rating": 5
             },
-            "createdTime": "2020-10-09T00:27:04.000Z"
+            "createdTime": "2021-09-16T22:08:34.000Z"
         },
         {
-            "id": "rec85tP6Ra4a3JiKL",
+            "id": "recp4xgK1dWzbJoH3",
             "fields": {
-                "title": "Independence Day",
-                "rating": 3,
-                "opinion": "This movie was not very good in terms of cinematic quality, however it smells of nostalgia which I can't help but enjoy every July 4th. "
+                "Category": "Primer",
+                "productName": "Maybelline Face Studio Master Prime Primer",
+                "rating": 4,
+                "review": "Covers pores, awesome primer. Good for combination skin (oily and dry skin) "
             },
-            "createdTime": "2020-10-09T00:27:04.000Z"
-        }
-    ],
-    "offset": "rec85tP6Ra4a3JiKL"
-}
+            "createdTime": "2021-09-16T22:08:34.000Z"
+        },
 
-```
 
 ### MVP/PostMVP
 
@@ -80,21 +76,17 @@ Airtable is returning the data for this base as follows:
 | Component                 | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------- | :------: | :------------: | :-----------: | :---------: |
 | Proposal                  |    H     |      2hrs      |     2hrs      |    2hrs     |
-| Airtable setup            |    H     |     2hrs      |      2hr      |     2hr     |
+| Airtable setup            |    H     |     2hrs      |      2hr       |     2hr     |
 | Clickable icons           |    H     |      3hrs      |      3hr      |     3hr     |
 | Data population pg 1      |    H     |      5hrs      |     5hrs      |    5hrs     |
 | Data population pg 2      |    H     |      2hrs      |     2hrs      |    2hrs     |
 | Data population pg 3      |    H     |      3hrs      |     2hrs      |    2hrs     |
-| Data population pg 4        |    H     |      2hrs      |     2hrs      |    2hrs     |
-| Form creation pg 1        |    H     |      2hrs      |     1 hr    |
-
-| Form creation pg 1        |    H     |      2hrs      |     1 hr    |
-
-
-| Component CSS pg 1        |    H     |      3hrs      |     4hrs      |    4hrs     |
+| Data population pg 4      |    H     |      2hrs      |     2hrs      |    2hrs     |
+| Form creation pg 1        |    H     |      2hrs      |     1 hr      |    1hr      || Component CSS pg 1        |    H     |      2 hr      |     2hrs      |    2hrs     |
 | Component CSS pg 2        |    H     |      3hrs      |     4hrs      |    4hrs     |
 | Component CSS pg 3        |    H     |      3hrs      |     4hrs      |    4hrs     |
-Component CSS pg 4
+| Component CSS pg 4        |    H     |      3hrs      |     4hrs      |    4hrs     |
+| Component CSS pg 5        |    H     |      1hr       |     1hr       |    1hr      |
 | Total                     |    H     |    42.5hrs     |     35hrs     |    35hrs    |
 
 ## SWOT Analysis
@@ -114,3 +106,4 @@ Motivated to continue builing my portfolio. This project can teach me using the 
 ### Threats:
 
 Lose a lot of time not asking for help.
+```
