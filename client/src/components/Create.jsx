@@ -36,7 +36,7 @@ export default function Create() {
           value={productName}
           onChange={(e) => setproductName(e.target.value)}
         />
-
+      <br />
     <label>Rating:</label>
         <input type="number"
           value={rating}

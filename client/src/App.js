@@ -21,10 +21,10 @@ function App() {
 <Route exact path="/makeupCategories">
     <MakeupCategories />
     </Route>
-<Route exact path="/makeup/:makeupLists">
+<Route exact path="/makeup/:products">
     <MakeupLists/>
     </Route>
-<Route exact path="/makeupLists:id">
+<Route exact path="/makeup/products/:id">
     <MakeupDetails/>
     </Route>
 <Route exact path="/new">

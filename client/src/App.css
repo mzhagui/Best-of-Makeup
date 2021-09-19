@@ -2,7 +2,7 @@
 .homepage{
   display: grid; 
   grid-template-columns: 1fr; 
-  grid-template-rows: 0.3fr  ; 
+  grid-template-rows: [row2-start] auto [row2-end];
   gap: 0px 0px; 
 }
 
