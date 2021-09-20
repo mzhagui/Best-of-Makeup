@@ -7,9 +7,12 @@ export default function Home() {
       {/* <Link to="/makeupCategories"> <button>SHOW ME</button> </Link>
        */}
         <div className="imagediv">
-<img className="image" src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/p-274-jir-5637-chim.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=65fda95bc8edf76bd003cc0fef395e5d" alt="backgroundimage"/>
+<img src="https://images.pexels.com/photos/4620838/pexels-photo-4620838.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="backgroundimage"/>
       </div>
-      <footer className="homefooter">DRUGSTORE AND WALLET FRIENDLY</footer>
+      <form>
+  <button formaction="/makeupCategories">SHOW ME</button>
+</form>
+      <footer>DRUGSTORE AND WALLET FRIENDLY</footer>
       </div>
   )
 }

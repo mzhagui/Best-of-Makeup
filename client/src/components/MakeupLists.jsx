@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom";
 import axios from 'axios'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import  './Lists.css'
 
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
@@ -37,12 +38,15 @@ export default function MakeupLists() {
 
   
   return (
-    <div>
+    <div >
       {categoryList.map((list) => {
         return (
-          <div>
-            <Link to={`/makeup/products/${list.id}`}> <img src={list.fields?.imageURL} alt="aproduct"/> </Link>
-            <h1>{list.fields.productName}</h1>
+          <div className="makeupLists">
+            <header> The Best {list.fields?.Category}</header>
+            <br/>
+            <Link to={`/makeup/products/${list.id}`}> <img className="image" src={list.fields?.imageURL} alt="aproduct"/> </Link>
+            <h1 className="listh1">{list.fields.productName}</h1>
+            <div className="v1"> </div>
             <br/>
             <Link to="/new">Add your Product Favorites</Link>
         

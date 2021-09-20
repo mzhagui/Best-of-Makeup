@@ -1,5 +1,3 @@
-
-
 import { Link } from "react-router-dom";
 import primer from "../images/primer.png"
 import foundation from "../images/foundation.png"
@@ -11,8 +9,6 @@ import eyeshadow from "../images/eyeshadow.png"
 import eyeliner from "../images/eyeliner.png"
 import mascara from "../images/mascara.png"
 import lipstick from "../images/lipstick.png"
-
-
 
 
 export default function MakeupCategories() {

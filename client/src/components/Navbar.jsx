@@ -7,6 +7,7 @@ export default function Navbar() {
       
       <li><Link to="/makeupCategories">Makeup Categories</Link></li>
       </ul>
+      
     </div>
   )
 }

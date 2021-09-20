@@ -1,0 +1,41 @@
+.makeupLists{
+  display:grid; 
+  grid-template-columns: 1fr ;
+  padding-top: 100px;
+background-color: #cbb4ac;
+}
+
+header{
+  display:grid;
+  font-family: 'Poppins', sans-serif;
+  color:white;
+ font-weight: bold;
+ font-size: 30px;
+ justify-content: center;
+}
+
+.image{
+  width: 300px;
+  height: 300px;
+  mix-blend-mode: multiply;
+  
+}
+
+.listh1{
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  color:white;
+  
+  
+}
+
+.v1{
+   
+    border-left: 3px solid white;
+    height: 300px;
+    position: rela;
+  left: 30%;
+  margin-left: -3px;
+ bottom: 50px;
+  
+}
