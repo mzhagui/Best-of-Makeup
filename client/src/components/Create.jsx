@@ -1,7 +1,7 @@
 import { useState} from "react"
 import axios from 'axios'
 import { useHistory } from "react-router";
-import Dropdown from 'react-bootstrap/Dropdown'
+import './Newform.css'
 
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
@@ -20,46 +20,46 @@ export default function Create() {
   const [rating, setRating] = useState(0)
   const [review, setReview] = useState("")
   const [imageURL, setimageURL] = useState("")
+  const [Category, setCategory] = useState("")
   const history = useHistory();
   
   const handleSubmit = async (e) => {
     e.preventDefault();
     const fields = {
-     productName, rating, review, imageURL
+     productName, rating, review, imageURL, Category
     }
   const res = await axios.post(URL, {fields}, config)
     console.log(res.data)
     
-    // history.push(`/makeup/${records.fields?.Category}`)
+    
+    history.push(`/makeup/${Category}`)
   }
 
   return (
-    <div>
+    <div className="creatediv">
       <h1> We want to know what your favorites are! </h1>
       <br />
-
-
-      {/* <Dropdown>
-        <Dropdown.Toggle variant="success">
-          Makeup Category
-        </Dropdown.Toggle>
-        <Dropdown.Menu>
-            <Dropdown.Item href="#">Foundation</Dropdown.Item>
-            <Dropdown.Item>Primer</Dropdown.Item>
-          <Dropdown.Item >Concealer</Dropdown.Item>
-            </Dropdown.Menu>
-      </Dropdown>
-     */}
-      <br/>
       
       <form onSubmit={handleSubmit}>
-       
-        <select>
-          <option value="foundation">Foundation</option>
-          <option value="primer">Primer</option>
+
+      <label for="Makeup Category">Makeup Category</label>
+        <select value={Category} onChange={(e) => setCategory(e.target.value)}>
+           <option value="Primer">Primer </option>
+          <option value="Foundation">Foundation</option>
+          <option value="Concealer">Concealer</option>
+          <option value="Powder">Powder</option>
+          <option value="Bronzer">Bronzer</option>
+          <option value="Blush">Blush</option>
+          <option value="Eyeshadow">Eyeshadow</option>
+          <option value="Eyeliner">Eyeliner</option>
+          <option value="Mascara">Mascara</option>
+          <option value="Lipstick">Lipstick</option>
+        
+
         </select>
         <br/> 
 
+        
         <label>Product Name:</label>
         <input type="text"
           placeholder=" Enter Product Name"
@@ -67,20 +67,21 @@ export default function Create() {
           onChange={(e) => setproductName(e.target.value)}
         />
       <br />
+    
     <label>Rating:</label>
         <input type="number"
           value={rating}
           onChange={(e) => setRating(e.target.valueAsNumber)}
         />
         <br />
-<label>Review:</label>
-        <input type="text"
-          placeholder=" Your review"
+    <label>Review:</label>
+         <input type="textarea"
+          placeholder=" Write your review..."
           value={review}
           onChange={(e) => setReview(e.target.value)}
         />
-<br/>
-<label>Image URL:</label>
+        <br/>
+    <label>Image URL:</label>
         <input type="text"
           placeholder= " Image Address"
           value={imageURL} 
@@ -88,8 +89,9 @@ export default function Create() {
         />
         <br />
         
-<button>Add My Favorite</button>
+<button className="createbutton">Add My Favorite</button>
       </form>
+      <footer>DRUGSTORE AND WALLET FRIENDLY</footer>
     </div>
   )
 }

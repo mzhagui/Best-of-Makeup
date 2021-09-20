@@ -1,6 +1,6 @@
 .detailsdiv {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -8,8 +8,10 @@
 }
 
 .detailsheader {
+  display: grid;
   font-family: "Poppins", sans-serif;
-  margin-left: 400px;
+  
+  justify-content: flex-end;
   position: absolute;
 }
 

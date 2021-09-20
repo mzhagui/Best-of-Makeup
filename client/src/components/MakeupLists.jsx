@@ -27,8 +27,7 @@ export default function MakeupLists() {
       // setLists(res.data.records);
      setCategoryList(res.data.records.filter((list) => list.fields.Category === products ? list : ""))
     // console.log(res.data.records.filter((list) => list.fields.Category === makeupLists ? list : ""))
-  console.log(setCategoryList)
-      // console.log(res.data.records)
+      console.log(res.data.records)
     };
 
     listofMakeup();
@@ -39,25 +38,24 @@ export default function MakeupLists() {
   
   return (
     <div >
+       <header> The Best {categoryList[0]?.fields?.Category}</header>
       {categoryList.map((list) => {
         return (
+          <>
           <div className="makeupLists">
-            <header> The Best {list.fields?.Category}</header>
             <br/>
             <Link to={`/makeup/products/${list.id}`}> <img className="image" src={list.fields?.imageURL} alt="aproduct"/> </Link>
             <h1 className="listh1">{list.fields.productName}</h1>
             <div className="v1"> </div>
             <br/>
-            <Link to="/new">Add your Product Favorites</Link>
         
  </div>
-             
-             
-         
+         </>
          
         );
-            
+      
       })}
+        <Link to="/new">Add your Product Favorites</Link>
     </div>
   )}
 

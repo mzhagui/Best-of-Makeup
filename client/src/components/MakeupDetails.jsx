@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import axios from "axios"
 import { useParams } from "react-router";
 import './Details.css'
+import { FaStar } from "react-icons/fa";
+import StarRating from "./StarRating";
 
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
@@ -29,13 +31,16 @@ export default function MakeupDetails() {
   }, []);
 
   return (
+    <div>
     <div className="detailsdiv">
       <h1 className="detailsheader">{product.fields?.productName}</h1>
-      <img className="imagedetail" src={product.fields?.imageURL} alt="product" />
-      <p className="rating">Rating: {product.fields?.rating} </p>
+        <img className="imagedetail" src={product.fields?.imageURL} alt="product" />
+        
+      <p className="rating">Rating: <StarRating rating={ product.fields?.rating} />  </p>
       <h4>Review
         <br />
         {product.fields?.review}</h4>
-    </div>
+      </div>
+      </div>
   )
 }

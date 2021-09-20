@@ -61,7 +61,7 @@ li{
   
 }
 
-form{
+.homebutton{
   display: grid;
  background-color: tomato;
   width: 100px;
@@ -72,3 +72,14 @@ form{
   left: 50%;
   transform: translate(-70%, 300%);
 }
+
+.starrating{
+  display: flex;
+  flex-direction: row;
+}
+/* 
+@media only screen {
+    and (min-device-width: 375px) 
+    and (min-device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3)
+} */

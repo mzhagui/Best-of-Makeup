@@ -1,6 +1,7 @@
 .makeupLists{
   display:grid; 
   grid-template-columns: 1fr ;
+
   padding-top: 100px;
 background-color: #cbb4ac;
 }
@@ -33,9 +34,10 @@ header{
    
     border-left: 3px solid white;
     height: 300px;
-    position: rela;
+    
   left: 30%;
   margin-left: -3px;
  bottom: 50px;
   
 }
+
