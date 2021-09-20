@@ -54,12 +54,8 @@ export default function Create() {
           <option value="Eyeliner">Eyeliner</option>
           <option value="Mascara">Mascara</option>
           <option value="Lipstick">Lipstick</option>
-        
-
         </select>
         <br/> 
-
-        
         <label>Product Name:</label>
         <input type="text"
           placeholder=" Enter Product Name"
