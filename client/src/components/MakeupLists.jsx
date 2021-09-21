@@ -38,7 +38,7 @@ export default function MakeupLists() {
   
   return (
     <div >
-       <header> The Best {categoryList[0]?.fields?.Category}</header>
+       <h1 className="headerlist"> The Best {categoryList[0]?.fields?.Category}</h1>
       {categoryList.map((list) => {
         return (
           <>

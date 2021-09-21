@@ -42,7 +42,7 @@ export default function Create() {
       
       <form onSubmit={handleSubmit}>
 
-      <label for="Makeup Category">Makeup Category</label>
+      <label>Makeup Category</label>
         <select value={Category} onChange={(e) => setCategory(e.target.value)}>
            <option value="Primer">Primer </option>
           <option value="Foundation">Foundation</option>

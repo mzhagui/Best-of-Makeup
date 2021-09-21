@@ -24,7 +24,7 @@ export default function MakeupDetails() {
       const res = await axios.get(`${URL}/${id}`, config);
 
       setProduct(res.data)
-      console.log(res.data)
+      // console.log(res.data)
     }
     productMakeup();
   }, []);
@@ -35,7 +35,7 @@ export default function MakeupDetails() {
       <h1 className="detailsheader">{product.fields?.productName}</h1>
         <img className="imagedetail" src={product.fields?.imageURL} alt="product" />
         
-      <p className="rating">Rating: <StarRating rating={ product.fields?.rating} />  </p>
+      <h3 className="rating">Rating: <StarRating rating={ product.fields?.rating}/></h3>
       <h4>Review
         <br />
         {product.fields?.review}</h4>

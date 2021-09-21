@@ -3,12 +3,11 @@
 
 export default function StarRating(props) {
   const { rating } = props
-  console.log(rating)
+  // console.log(rating)
   return (
     <div className="starrating">
       {[...Array(rating)].map((star, index) => {
-      
-        return (
+      return (
           <div key={index}>
           <FaStar/>
             </div>

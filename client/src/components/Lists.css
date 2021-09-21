@@ -1,12 +1,12 @@
 .makeupLists{
   display:grid; 
-  grid-template-columns: 1fr ;
-
-  padding-top: 100px;
+  grid-template-columns: 1fr;
+  padding-top: 50px;
 background-color: #cbb4ac;
 }
 
-header{
+.headerlist{
+  background-color: #cbb4ac;
   display:grid;
   font-family: 'Poppins', sans-serif;
   color:white;
