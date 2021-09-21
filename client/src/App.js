@@ -7,6 +7,7 @@ import MakeupCategories from "./components/MakeupCategories"
 import MakeupLists from "./components/MakeupLists"
 import MakeupDetails from "./components/MakeupDetails"
 import Create from "./components/Create"
+import Footer from './components/Footer'
 // const KEY = process.env.REACT_APP_AIRTABLE_KEY;
 // const BASE = process.env.REACT_APP_AIRTABLE_BASE;
 
@@ -30,9 +31,7 @@ function App() {
 <Route exact path="/new">
     <Create/>
     </Route>
-
-
-
+<Footer/>
     </div>
   );
 }

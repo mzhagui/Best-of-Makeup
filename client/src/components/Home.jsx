@@ -12,7 +12,6 @@ export default function Home() {
       <form className="homebutton">
   <button formAction="/makeupCategories">SHOW ME</button>
 </form>
-      <footer>DRUGSTORE AND WALLET FRIENDLY</footer>
       </div>
   )
 }

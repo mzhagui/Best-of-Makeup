@@ -43,7 +43,6 @@ export default function MakeupLists() {
       {categoryList.map((list, index) => {
         return (
           <div className="makeupcontainer">
-            {/* <div className="makeupLists" key={index}> */}
             <Link to={`/makeup/products/${list.id}`}> <img className="image" src={list.fields?.imageURL} alt="aproduct"/> </Link>
             <h1 className="listh1">{list.fields.productName}</h1>
                

@@ -1,0 +1,9 @@
+footer {
+  position: sticky;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 25px;
+  font-weight: bold;
+}

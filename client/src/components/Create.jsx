@@ -87,7 +87,6 @@ export default function Create() {
         
 <button className="createbutton">Add My Favorite</button>
       </form>
-      <footer>DRUGSTORE AND WALLET FRIENDLY</footer>
     </div>
   )
 }
