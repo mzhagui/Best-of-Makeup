@@ -21,20 +21,18 @@ export default function MakeupDetails() {
   useEffect(() => {
     const productMakeup = async () => {
       const res = await axios.get(`${URL}/${id}`, config);
-
       setProduct(res.data)
-      // console.log(res.data)
     }
     productMakeup();
-  }, []);
+  }, [id]);
 
   return (
     <div>
     <div className="detailsdiv">
       <h1 className="detailsheader">{product.fields?.productName}</h1>
-        <img className="imagedetail" src={product.fields?.imageURL} alt="product" />  
-      <h3 className="rating">Rating: <StarRating rating={ product.fields?.rating}/></h3>
-      <h4>Review
+      <img className="imagedetail" src={product.fields?.imageURL} alt="product" />  
+      <h3 className="rating">Rating <StarRating rating={ product.fields?.rating}/></h3>
+      <h4 className ="review">Review
         <br />
         {product.fields?.review}</h4>
       </div>

@@ -34,24 +34,28 @@ export default function MakeupLists() {
   }, []);
   
   return (
-    <div className="container">
-       <h1 className="headerlist"> The Best {categoryList[0]?.fields?.Category}s</h1>
-      {categoryList.map((list) => {
+  <div>
+      <div className="headers">
+        <h1 className="headerlist"> The Best {categoryList[0]?.fields?.Category}s</h1>
+        <Link className="linkAdd" to="/new">Add your Product Favorites</Link>
+      </div>
+      <div className="makeup">
+      {categoryList.map((list, index) => {
         return (
-          <>
-            <div className="makeupcontainer">
-          <div className="makeupLists">
-            <br/>
+          <div className="makeupcontainer">
+            {/* <div className="makeupLists" key={index}> */}
             <Link to={`/makeup/products/${list.id}`}> <img className="image" src={list.fields?.imageURL} alt="aproduct"/> </Link>
             <h1 className="listh1">{list.fields.productName}</h1>
-                <br />
-                </div>
- </div>
-         </>
+               
+          </div>
+         
+        
         );
+
       })}
-        <Link className="linkAdd" to="/new">Add your Product Favorites</Link>
-    </div>
+      </div>
+      
+      </div>
   )}
 
  
