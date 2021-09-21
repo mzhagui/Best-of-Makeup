@@ -33,29 +33,24 @@ export default function MakeupLists() {
     listofMakeup();
   }, []);
   
-
-
-  
   return (
-    <div >
-       <h1 className="headerlist"> The Best {categoryList[0]?.fields?.Category}</h1>
+    <div className="container">
+       <h1 className="headerlist"> The Best {categoryList[0]?.fields?.Category}s</h1>
       {categoryList.map((list) => {
         return (
           <>
+            <div className="makeupcontainer">
           <div className="makeupLists">
             <br/>
             <Link to={`/makeup/products/${list.id}`}> <img className="image" src={list.fields?.imageURL} alt="aproduct"/> </Link>
             <h1 className="listh1">{list.fields.productName}</h1>
-            <div className="v1"> </div>
-            <br/>
-        
+                <br />
+                </div>
  </div>
          </>
-         
         );
-      
       })}
-        <Link to="/new">Add your Product Favorites</Link>
+        <Link className="linkAdd" to="/new">Add your Product Favorites</Link>
     </div>
   )}
 
