@@ -31,7 +31,8 @@ img{
 
 
 .navbar{
-display: grid;
+display: flex;
+justify-content:space-between;
 background-color: black;
 color: white;
 font-family: 'Poppins', sans-serif;

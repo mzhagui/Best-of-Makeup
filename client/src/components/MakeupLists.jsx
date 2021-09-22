@@ -4,8 +4,6 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import './Lists.css'
 import Delete from "./Delete"
-import {toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
@@ -30,7 +28,6 @@ export default function MakeupLists() {
       const res = await axios.get(URL, config);   
      setCategoryList(res.data.records.filter((list) => list.fields.Category === products ? list : ""))
       console.log(res.data.records)
-      toast("Loading")
     };
 
     listofMakeup();
@@ -50,10 +47,14 @@ export default function MakeupLists() {
           <div className="makeupcontainer" key={list.id}>
             <Link to={`/makeup/products/${list.id}`}> <img className="image" src={list.fields?.imageURL} alt="aproduct"/> </Link>
             <h1 className="listh1">{list.fields.productName}</h1>
+
+            <div className="edit-delete">
+            <Link to={`/makeup/products/${list.id}/edit`} className="fas fa-edit"></Link>
             <Delete
               setDeleted={setDeleted}
               id={list.id}
-              category={list.fields?.Category} />
+                category={list.fields?.Category} />
+            </div>
            
           </div>
          

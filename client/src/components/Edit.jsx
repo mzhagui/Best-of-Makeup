@@ -1,12 +1,13 @@
-import { useState} from "react"
 import axios from 'axios'
-import { useHistory } from "react-router";
-import './Newform.css'
+import { useParams } from 'react-router';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
-const URL = `https://api.airtable.com/v0/${airtableBase}/BestofMakeup`;
+const URL = `https://api.airtable.com/v0/${airtableBase}/BestofMakeup`
+
 
 const config = {
   headers: {
@@ -15,48 +16,47 @@ const config = {
 };
 
 
-export default function Create() {
+export default function EditTeam() {
   const [productName, setproductName] = useState("")
   const [rating, setRating] = useState(0)
   const [review, setReview] = useState("")
   const [imageURL, setimageURL] = useState("")
   const [Category, setCategory] = useState("")
-  const history = useHistory();
+  const { id } = useParams()
   
+  useEffect(() => {
+    const fetchMakeup = async () => {
+      const res = await axios.get(`${URL}/${id}`, config)
+      const { fields } = res.data
+      setproductName(fields.productName)
+      setRating(fields.rating)
+      setReview(fields.review)
+      setimageURL(fields.imageURL)
+      setCategory(fields.Category)
+     
+    };
+    fetchMakeup();
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const fields = {
-     productName, rating, review, imageURL, Category
+      productName,
+      rating,
+      review,
+      imageURL,
+      Category,
+     
     }
-  const res = await axios.post(URL, {fields}, config)
-    console.log(res.data)
-    
-    
-    history.push(`/makeup/${Category}`)
-  }
 
+    const res = await axios.put(`${URL}/${id}`, { fields }, config)
+    console.log(res)
+  };
   return (
-    <div className="creatediv">
-      <h1> We want to know what your favorites are! </h1>
-      <br />
-      
-      <form onSubmit={handleSubmit}>
-
-      <label>Makeup Category</label>
-        <select value={Category} onChange={(e) => setCategory(e.target.value)}>
-          <option value="Primer">Primer </option>
-          <option value="Foundation">Foundation</option>
-          <option value="Concealer">Concealer</option>
-          <option value="Powder">Powder</option>
-          <option value="Bronzer">Bronzer</option>
-          <option value="Blush">Blush</option>
-          <option value="Eyeshadow">Eyeshadow</option>
-          <option value="Eyeliner">Eyeliner</option>
-          <option value="Mascara">Mascara</option>
-          <option value="Lipstick">Lipstick</option>
-        </select>
-        <br/> 
-        <label>Product Name:</label>
+    <div>
+      <form>
+   
+      <label>Product Name:</label>
         <input type="text"
           autoFocus
           placeholder=" Enter Product Name"
@@ -85,9 +85,9 @@ export default function Create() {
           onChange={(e) => setimageURL(e.target.value)}
         />
         <br />
-        
-<button className="createbutton">Add My Favorite</button>
+        <button>Edit</button>
       </form>
+      
     </div>
   )
 }

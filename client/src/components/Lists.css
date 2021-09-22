@@ -15,9 +15,15 @@
   grid-template-rows:  1fr 1fr ;
   background-color: #cbb4ac;
   column-gap: 30px;
+  row-gap: 2ch;
  
 }
-
+.edit-delete{
+  display: flex;
+  justify-content: space-evenly;
+  color: rgb(111, 33, 46);
+  padding-top: 10px;
+}
 .headers{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
