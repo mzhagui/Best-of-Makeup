@@ -2,7 +2,10 @@ import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom";
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import  './Lists.css'
+import './Lists.css'
+import Delete from "./Delete"
+import {toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
@@ -20,32 +23,38 @@ export default function MakeupLists() {
   
   const [categoryList, setCategoryList] = useState([])
   const { products } = useParams()
-  
+  const [deleted, setDeleted]= useState(false)
+
   useEffect(() => {
     const listofMakeup = async () => {
-      const res = await axios.get(URL, config);
-      // setLists(res.data.records);
+      const res = await axios.get(URL, config);   
      setCategoryList(res.data.records.filter((list) => list.fields.Category === products ? list : ""))
-    // console.log(res.data.records.filter((list) => list.fields.Category === makeupLists ? list : ""))
       console.log(res.data.records)
+      toast("Loading")
     };
 
     listofMakeup();
-  }, []);
+  }, [deleted]);
   
   return (
   <div>
       <div className="headers">
-        <h1 className="headerlist"> The Best {categoryList[0]?.fields?.Category}s</h1>
+        <h1 className="headerlist"> The Best {products}s</h1>
         <Link className="linkAdd" to="/new">Add your Product Favorites</Link>
+       
       </div>
       <div className="makeup">
-      {categoryList.map((list, index) => {
+      {categoryList.map((list) => {
         return (
-          <div className="makeupcontainer">
+         
+          <div className="makeupcontainer" key={list.id}>
             <Link to={`/makeup/products/${list.id}`}> <img className="image" src={list.fields?.imageURL} alt="aproduct"/> </Link>
             <h1 className="listh1">{list.fields.productName}</h1>
-               
+            <Delete
+              setDeleted={setDeleted}
+              id={list.id}
+              category={list.fields?.Category} />
+           
           </div>
          
         

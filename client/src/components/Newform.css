@@ -60,3 +60,20 @@ input[type="textarea"]{
 .reviewdiv {
   height: 200px;
 }
+
+.delete-div{
+  display: flex;
+  justify-content: center;
+}
+
+.delete-button{
+  background-color: #bd7488;
+  color: white;
+  padding: 10px ;
+  border: none;
+  cursor: pointer;
+  width:100px;
+  opacity: 1.0;
+  margin-right: 20px;
+  text-align: center;
+}

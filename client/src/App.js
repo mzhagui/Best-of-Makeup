@@ -8,6 +8,7 @@ import MakeupLists from "./components/MakeupLists"
 import MakeupDetails from "./components/MakeupDetails"
 import Create from "./components/Create"
 import Footer from './components/Footer'
+import { ToastContainer } from 'react-toastify';
 // const KEY = process.env.REACT_APP_AIRTABLE_KEY;
 // const BASE = process.env.REACT_APP_AIRTABLE_BASE;
 
@@ -30,8 +31,9 @@ function App() {
     </Route>
 <Route exact path="/new">
     <Create/>
-    </Route>
-<Footer/>
+      </Route>
+      <Footer />
+      <ToastContainer/>
     </div>
   );
 }
