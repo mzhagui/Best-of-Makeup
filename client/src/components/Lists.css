@@ -49,6 +49,11 @@
   mix-blend-mode: multiply;
 }
 
+.image:hover{
+  transform: scale(1.0);
+  
+}
+
 .listh1 {
   font-size: 18px;
   font-family: "Poppins", sans-serif;

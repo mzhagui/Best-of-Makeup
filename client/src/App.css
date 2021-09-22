@@ -1,75 +1,69 @@
 /* Home Page */
-.homepage{
+.home-page {
+  display: grid;
+}
+
+.home-image {
+  width: 100vw;
+  /* background-size: cover; */
+  height: 90vh;
+  margin-bottom: -50px;
+}
+
+.h1 {
   display: flex;
- 
-}
-
-.homeimage{
-  display:flex;
-  max-height: 100vh;
-  max-width: 100%;
-}
-
-img{
-  max-width: 100%;
-  max-height: 100vh;
-  max-height: auto;
-}
-
-.h1{
-  display:flex;
-  position:absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 50px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: white;
 }
 
-
-
-.navbar{
-display: flex;
-justify-content:space-between;
-background-color: black;
-color: white;
-font-family: 'Poppins', sans-serif;
-
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  font-family: "Poppins", sans-serif;
 }
 
-li{
-  float:left;
+li {
+  float: left;
   padding: 25px;
 }
 
-.icons{
+.icons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 50px ;
+  margin: 50px;
   justify-content: space-evenly;
   row-gap: 100px;
   column-gap: 100px;
-  
 }
 
-.homebutton{
+@media only screen and (max-width: 375px) {
+  .icons {
+    display: grid;
+    grid-template-columns: 20% auto;
+  }
+}
+
+.homebutton {
   display: grid;
- background-color: tomato;
+  background-color: tomato;
   width: 100px;
   justify-content: center;
   position: absolute;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   top: 50%;
   left: 50%;
   transform: translate(-70%, 300%);
 }
 
 
-/* 
-@media only screen {
-    and (min-device-width: 375px) 
-    and (min-device-height: 812px) 
-    and (-webkit-device-pixel-ratio: 3)
-} */
+
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+}

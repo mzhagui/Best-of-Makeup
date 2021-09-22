@@ -1,7 +1,7 @@
 import { useState} from "react"
 import axios from 'axios'
 import { useHistory } from "react-router";
-import './Newform.css'
+import './Create.css'
 
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;

@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useParams } from 'react-router';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { useHistory } from 'react-router';
 
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
@@ -15,7 +16,6 @@ const config = {
   },
 };
 
-
 export default function EditTeam() {
   const [productName, setproductName] = useState("")
   const [rating, setRating] = useState(0)
@@ -23,6 +23,7 @@ export default function EditTeam() {
   const [imageURL, setimageURL] = useState("")
   const [Category, setCategory] = useState("")
   const { id } = useParams()
+  const history = useHistory()
   
   useEffect(() => {
     const fetchMakeup = async () => {
@@ -50,11 +51,14 @@ export default function EditTeam() {
     }
 
     const res = await axios.put(`${URL}/${id}`, { fields }, config)
-    console.log(res)
+    history.push(`/makeup/products/${res.data.id}`)
   };
+
   return (
-    <div>
-      <form>
+    <div className="edit-div">
+      <h1>Make some changes to your product.</h1>
+      <br/>
+      <form onSubmit={handleSubmit}>
    
       <label>Product Name:</label>
         <input type="text"
@@ -85,7 +89,7 @@ export default function EditTeam() {
           onChange={(e) => setimageURL(e.target.value)}
         />
         <br />
-        <button>Edit</button>
+        <button className="edit-button">Save</button>
       </form>
       
     </div>
