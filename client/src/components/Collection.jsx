@@ -43,7 +43,7 @@ const params = useParams()
           <div className="fav-image-container">
             <img className="favorites-image" src={product.imageURL} />
             </div>
-        <button className="far fa-trash-alt"></button>
+          {/* <button className="far fa-trash-alt" onClick={ handleClick}></button> */}
   </div>
       ))
       }
