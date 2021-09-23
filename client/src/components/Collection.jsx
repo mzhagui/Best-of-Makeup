@@ -13,29 +13,30 @@ const config = {
   },
 };
 
-export default function Collection() {
-  const [collections, setCollections] = useState([])
-const params = useParams()
+export default function Collection(props) {
+  // const [collections, setCollections] = useState([])
+  const { collections, setCollections }= props
+// const params = useParams()
 
-  useEffect(() => {
-    const fetchItem = async () => {
-      const res = await axios.get(`${URL}/${params.id}`, config);
-      if (localStorage.getItem("collections")) {
-        const collectionArray = [...JSON.parse(localStorage.getItem("collections")),res.data.fields]
-        localStorage.setItem("collections", JSON.stringify(collectionArray))
-      } else {
-        localStorage.setItem("collections", JSON.stringify([res.data.fields]))
-      }
-      setCollections(JSON.parse(localStorage.getItem("collections")))
-    };
+  // useEffect(() => {
+  //   const fetchItem = async () => {
+  //     const res = await axios.get(`${URL}/${params.id}`, config);
+  //     if (localStorage.getItem("collections")) {
+  //       const collectionArray = [...JSON.parse(localStorage.getItem("collections")),res.data.fields]
+  //       localStorage.setItem("collections", JSON.stringify(collectionArray))
+  //     } else {
+  //       localStorage.setItem("collections", JSON.stringify([res.data.fields]))
+  //     }
+  //     setCollections(JSON.parse(localStorage.getItem("collections")))
+  //   };
     
-    if (params.id) {
-      fetchItem() 
-    }
-    else {
-      setCollections(JSON.parse(localStorage.getItem("collections")))
-    }
-  },[params])
+  //   if (params.id) {
+  //     fetchItem() 
+  //   }
+  //   else {
+  //     setCollections(JSON.parse(localStorage.getItem("collections")))
+  //   }
+  // },[params])
 
   // function handleErase(e) {
   //   e.preventDefault(); 

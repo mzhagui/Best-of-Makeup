@@ -17,12 +17,14 @@ const config = {
   },
 };
 
-export default function MakeupLists() {
+export default function MakeupLists(props) {
   
   const [categoryList, setCategoryList] = useState([])
   const { products } = useParams()
-  const [deleted, setDeleted]= useState(false)
-
+  const [deleted, setDeleted] = useState(false)
+  const [add, setAdd] = useState(false)
+  const { collections, setCollections } = props
+  const [itemId, setItemId] = useState("")
   useEffect(() => {
     const listofMakeup = async () => {
       const res = await axios.get(URL, config);   
@@ -31,7 +33,30 @@ export default function MakeupLists() {
 
     listofMakeup();
   }, [deleted, products]);
-  
+  const handleCollection = (id)=> {
+    setAdd(prevState => !prevState)
+    setItemId(id)
+  }
+  useEffect(() => {
+    const fetchItem = async () => {
+      const res = await axios.get(`${URL}/${itemId}`, config);
+      if (localStorage.getItem("collections")) {
+        const collectionArray = [...JSON.parse(localStorage.getItem("collections")),res.data.fields]
+        localStorage.setItem("collections", JSON.stringify(collectionArray))
+      } else {
+        localStorage.setItem("collections", JSON.stringify([res.data.fields]))
+      }
+      setCollections(JSON.parse(localStorage.getItem("collections")))
+    };
+    
+    if (itemId) {
+      fetchItem() 
+    }
+    else {
+      setCollections(JSON.parse(localStorage.getItem("collections")))
+    }
+  },[add])
+
   return (
   <div>
       <div className="headers">
@@ -50,8 +75,12 @@ export default function MakeupLists() {
                     setDeleted={setDeleted}
                     id={item.id}
                     category={item.fields?.Category} />
-            <Link to={`/Collection/${item.id}`} className="fas fa-star" ></Link>
-       
+              {/* <Link to={`/Collection/${item.id}`}  */}
+              <div onClick={()=> handleCollection(item.id)}><i className="fas fa-star"></i></div>
+              {/* <
+                
+             ></Link>
+        */}
           </div>
           </div>
         );
