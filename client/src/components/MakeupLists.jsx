@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom";
 import axios from 'axios'
-import { Link, Route } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 import './MakeupLists.css'
 import Delete from "./Delete"
 

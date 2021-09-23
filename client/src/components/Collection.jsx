@@ -28,22 +28,29 @@ const params = useParams()
       }
       setCollections(JSON.parse(localStorage.getItem("collections")))
     };
-    fetchItem()   
-  },[])
+    
+    if (params.id) {
+      fetchItem() 
+    }
+    else {
+      setCollections(JSON.parse(localStorage.getItem("collections")))
+    }
+  },[params])
 
-//   const handleSubmit =
-//   e.preventDefault
-// setCollections()
+  // function handleErase(e) {
+  //   e.preventDefault(); 
+  // }
+
   return (
     <div>
 <div>
       <h1> MY COLLECTION </h1>
-      {collections.map(product => (
-        <div> <h1 className="favorites-h1">{product.productName}</h1>
+      {collections?.map(product => (
+        <div key={product?.id}> <h1 className="favorites-h1">{product?.productName}</h1>
           <div className="fav-image-container">
-            <img className="favorites-image" src={product.imageURL} />
+            <img className="favorites-image" src={product?.imageURL}/>
             </div>
-          {/* <button className="far fa-trash-alt" onClick={ handleClick}></button> */}
+          {/* <button onClick={handleErase}className="far fa-trash-alt">Delete</button> */}
   </div>
       ))
       }
