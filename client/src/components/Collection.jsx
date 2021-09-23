@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import axios from 'axios'
+import './Collection.css'
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -35,14 +36,18 @@ const params = useParams()
 // setCollections()
   return (
     <div>
-      <h1> This is a collection </h1>
+<div>
+      <h1> MY COLLECTION </h1>
       {collections.map(product => (
-        <p>{product.productName}</p>
+        <div> <h1 className="favorites-h1">{product.productName}</h1>
+          <div className="fav-image-container">
+            <img className="favorites-image" src={product.imageURL} />
+            </div>
+        <button className="far fa-trash-alt"></button>
+  </div>
       ))
       }
-      
-      
- 
+      </div>
     </div>
   )
 }

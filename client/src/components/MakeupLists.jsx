@@ -4,7 +4,7 @@ import axios from 'axios'
 import { Link, Route } from 'react-router-dom'
 import './MakeupLists.css'
 import Delete from "./Delete"
-import Collection from "./Collection";
+
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -50,7 +50,7 @@ export default function MakeupLists() {
                     setDeleted={setDeleted}
                     id={item.id}
                     category={item.fields?.Category} />
-            <Link to={`/Collection/${item.id}`} className="fas fa-star" >  </Link>
+            <Link to={`/Collection/${item.id}`} className="fas fa-star" ></Link>
        
           </div>
           </div>
