@@ -11,6 +11,7 @@ import Footer from './components/Footer'
 import Edit from "./components/Edit"
 import Collection from './components/Collection';
 
+
 // const KEY = process.env.REACT_APP_AIRTABLE_KEY;
 // const BASE = process.env.REACT_APP_AIRTABLE_BASE;
 
@@ -34,10 +35,12 @@ function App() {
 <Route exact path="/new">
     <Create/>
       </Route>
-      <Route path="/makeup/products/:id/edit">  
+<Route path="/makeup/products/:id/edit">  
     <Edit/>
       </Route>
-      
+      <Route path="/Collection/:id">
+        <Collection/>
+        </Route>
       <Footer />
     </div>
   );

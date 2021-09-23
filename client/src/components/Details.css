@@ -12,8 +12,6 @@
 }
 }
 
-
-
 .detailsheader {
   font-family: "Poppins", sans-serif;
   height: 100px;
@@ -26,9 +24,7 @@
 .imagedetail {
   width: 300px;
   height: 400px;
-
 }
-
 
  .starrating{
     display: flex;
@@ -39,9 +35,6 @@
 
 
 .rating {
-  /* display: grid;
-  grid-column: 100%;
-  grid-row: 2; */
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
@@ -56,8 +49,6 @@
 }
 .review{
 font-family: 'Poppins', sans-serif;
-
-
 }
 
 

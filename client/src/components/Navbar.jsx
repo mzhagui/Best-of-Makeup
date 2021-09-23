@@ -5,9 +5,7 @@ export default function Navbar() {
     <div className="navbar">
       <ul>
       <li><Link to="/">Best of Makeup</Link></li>
-      
-        <li><Link to="/makeupCategories">Makeup Categories</Link></li>
-       
+      <li><Link to="/makeupCategories">Makeup Categories</Link></li>
       </ul>
       
     </div>

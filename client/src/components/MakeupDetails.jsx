@@ -15,6 +15,7 @@ const config = {
     Authorization: `Bearer ${airtableKey}`,
   },
 };
+
 export default function MakeupDetails() {
   const [product, setProduct] = useState({})
   const { id } = useParams();
@@ -38,15 +39,9 @@ export default function MakeupDetails() {
             <h4 className="review-header">Review: </h4>  
             <h4 className="review"> {product.fields?.review} </h4>
     </div>
-        </div>
     </div>
-      
-      
     </div>
-   
-
-   
-      
+    </div>  
   )
 
 }
