@@ -3,7 +3,7 @@ import axios from "axios"
 import { useParams } from "react-router";
 import './Details.css'
 import StarRating from "./StarRating";
-import { Link } from "react-router-dom";
+
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
@@ -31,16 +31,15 @@ export default function MakeupDetails() {
     <div>
     <div className="detailsdiv">
       <h1 className="detailsheader">{product.fields?.productName}</h1>
-      <div className="details-container">
+    <div className="details-container">
         <img className="imagedetail" src={product.fields?.imageURL} alt="product" />
-      <div className="rating-review-container">
+    <div className="rating-review-container">
         <h3 className="rating">Rating <StarRating rating ={product.fields?.rating} /></h3>
             <h4 className="review-header">Review: </h4>  
             <h4 className="review"> {product.fields?.review} </h4>
-          </div>
-   
+    </div>
         </div>
-        </div>
+    </div>
       
       
     </div>

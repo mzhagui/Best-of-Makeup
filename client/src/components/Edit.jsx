@@ -37,7 +37,7 @@ export default function EditTeam() {
      
     };
     fetchMakeup();
-  }, []);
+  }, [id]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

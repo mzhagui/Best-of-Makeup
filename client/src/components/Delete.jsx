@@ -1,5 +1,3 @@
-import { useHistory } from "react-router";
-import{useState} from 'react'
 import axios from 'axios'
 
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;

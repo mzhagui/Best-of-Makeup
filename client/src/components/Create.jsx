@@ -44,6 +44,7 @@ export default function Create() {
 
       <label>Makeup Category</label>
         <select value={Category} onChange={(e) => setCategory(e.target.value)}>
+          <option value="Category">Choose a Makeup Category</option>
           <option value="Primer">Primer </option>
           <option value="Foundation">Foundation</option>
           <option value="Concealer">Concealer</option>
