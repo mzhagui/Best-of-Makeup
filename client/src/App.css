@@ -41,6 +41,8 @@ li {
   justify-content: space-evenly;
   row-gap: 100px;
   column-gap: 100px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 375px) {

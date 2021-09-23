@@ -76,11 +76,11 @@ export default function EditTeam() {
         />
         <br />
     <label>Review:</label>
-         <input type="textarea"
+         <textarea type="text"
           placeholder=" Write your review..."
           value={review}
-          onChange={(e) => setReview(e.target.value)}
-        />
+          onChange={(e) => setReview(e.target.value)}>
+        </textarea>
         <br/>
     <label>Image URL:</label>
         <input type="text"
