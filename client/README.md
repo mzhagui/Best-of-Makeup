@@ -55,38 +55,39 @@ Airtable is returning the data for this base as follows:
 
 #### PostMVP
 
-- Become more broad and include different aspects of beauty
-- Add a search bar to home page to find products
+-Edit / Delete Button
+- Include My Favorites/ My Collection page
 
 ## Project Schedule
 
 | Day      | Deliverable                                | Status   |
 | -------- | ------------------------------------------ | -------- |
-| Sept 16-17 | Proposal Approval / Airtable Setup         | Incomplete |
-| Sept 18   | Component Creation | Incomplete|
-| Sept 20    | Continue component Creation           | Incomplete |
-| Sept 21    | CSS Components                  | Incomplete |
-| Sept 22   | Advanced CSS                               | Incomplete |
-| Sept 23   | Wrap up/ make sure MVP completed                              | Incomplete |
-|Sept 24   | Presentation | Incomplete
+| Sept16-17| Proposal Approval / Airtable Setup         | Complete |
+| Sept 18  | Component Creation                         | Complete |
+| Sept 20  | Continue component Creation                | Complete |
+| Sept 21  | CSS Components                             | Complete |
+| Sept 22  | Advanced CSS                               | Complete |
+| Sept 23  | Wrap up/ make sure MVP                     | Complete |                               
+| Sept 24  | Presentation                               |Incomplete|
 
 ## Timeframes
 
 | Component                 | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------- | :------: | :------------: | :-----------: | :---------: |
 | Proposal                  |    H     |      2hrs      |     2hrs      |    2hrs     |
-| Airtable setup            |    H     |     2hrs      |      2hr       |     2hr     |
+| Airtable setup            |    H     |      2hrs      |      2hr      |     2hr     |
 | Clickable icons           |    H     |      3hrs      |      3hr      |     3hr     |
-| Data population pg 1      |    H     |      5hrs      |     5hrs      |    5hrs     |
-| Data population pg 2      |    H     |      2hrs      |     2hrs      |    2hrs     |
+| Data population pg 1      |    H     |      5hrs      |     5hrs      |    4hrs     |
+| Data population pg 3      |    H     |      2hrs      |     2hrs      |    2hrs     |
 | Data population pg 3      |    H     |      3hrs      |     2hrs      |    2hrs     |
 | Data population pg 4      |    H     |      2hrs      |     2hrs      |    2hrs     |
-| Form creation pg 1        |    H     |      2hrs      |     1 hr      |    1hr      || Component CSS pg 1        |    H     |      2 hr      |     2hrs      |    2hrs     |
+| Form creation pg 1        |    H     |      2hrs      |     1 hr      |    1hr      | | Component CSS pg 1        |    H     |      2 hr      |     2hrs      |    2hrs     |
 | Component CSS pg 2        |    H     |      3hrs      |     4hrs      |    4hrs     |
 | Component CSS pg 3        |    H     |      3hrs      |     4hrs      |    4hrs     |
 | Component CSS pg 4        |    H     |      3hrs      |     4hrs      |    4hrs     |
-| Component CSS pg 5        |    H     |      1hr       |     1hr       |    1hr      |
-| Total                     |    H     |    42.5hrs     |     35hrs     |    35hrs    |
+| Component CSS pg 5        |    H     |      1hr       |     2hr       |    2hrs     |
+| Post MVP                  |    H     |      5hr       |     8hrs      |    8hrs     |
+|Total                      |    H     |    38hrs       |    42hrs      |    42hrs    |
 
 ## SWOT Analysis
 
