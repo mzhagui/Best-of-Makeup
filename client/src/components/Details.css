@@ -6,8 +6,8 @@
 
 @media only screen and (max-width:375px) {
   .details-container{
-  display: flex;
-  justify-content: center;
+  display: grid;
+  justify-content: 50% auto;
   
   }
 }
@@ -62,8 +62,7 @@ margin-left: 40px;
   .imagedetail{
     width: 200px;
     height:200px;
-    display: flex;
-    justify-content: center;
+    margin-left: 80px;
   }
 }
 
