@@ -31,6 +31,7 @@ export default function MakeupLists(props) {
 
     listofMakeup();
   }, [deleted, products]);
+
   const handleCollection = (id) => {
     setAdd(prevState => !prevState)
     setItemId(id)

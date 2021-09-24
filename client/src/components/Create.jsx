@@ -71,6 +71,7 @@ export default function Create() {
           value={rating}
           min="0"
           max="5"
+          placeholder="Rating 0 - 5"
           onChange={(e) => setRating(e.target.valueAsNumber)}
         />
         <br />

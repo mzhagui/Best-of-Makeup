@@ -2,11 +2,11 @@ import './Collection.css'
 
 export default function Collection(props) {
   const { collections }= props
-
+console.log(collections)
   return (
     <div>
-<div>
-      <h1> MY COLLECTION </h1>
+<div className="fav-container">
+      <h1 className="header-fav"> MY COLLECTION </h1>
         {collections?.map((product, index) => {
           return (
             <div key={index}>

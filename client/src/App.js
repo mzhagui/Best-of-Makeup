@@ -12,11 +12,10 @@ import Edit from "./components/Edit"
 import Collection from './components/Collection';
 import {useState} from 'react'
  
-// const KEY = process.env.REACT_APP_AIRTABLE_KEY;
-// const BASE = process.env.REACT_APP_AIRTABLE_BASE;
+
 
 function App() {
-  const [collections, setCollections] = useState([])
+  const [collections, setCollections] = useState(JSON.parse(localStorage.getItem("collections")))
   return (
     <div className="App">
     <Navbar />

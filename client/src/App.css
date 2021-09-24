@@ -46,12 +46,7 @@ li {
   margin-bottom: 110px;
 }
 
-@media only screen and (max-width: 375px) {
-  .icons {
-    display: grid;
-    grid-template-columns: 20% auto;
-  }
-}
+
 
 .homebutton {
   display: grid;
@@ -65,6 +60,12 @@ li {
   transform: translate(-70%, 300%);
 }
 
+@media only screen and (max-width: 375px) {
+  .icons {
+    display: grid;
+    grid-template-columns: 20% auto;
+  }
+}
 
 
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {

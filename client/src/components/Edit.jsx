@@ -72,6 +72,8 @@ export default function EditTeam() {
     <label>Rating:</label>
         <input type="number"
           value={rating}
+          min="0"
+          max="5"
           onChange={(e) => setRating(e.target.valueAsNumber)}
         />
         <br />
