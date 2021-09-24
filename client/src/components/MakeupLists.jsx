@@ -21,7 +21,7 @@ export default function MakeupLists(props) {
   const { products } = useParams()
   const [deleted, setDeleted] = useState(false)
   const [add, setAdd] = useState(false)
-  const { collections, setCollections } = props
+  const {setCollections } = props
   const [itemId, setItemId] = useState("")
   useEffect(() => {
     const listofMakeup = async () => {
@@ -56,7 +56,7 @@ export default function MakeupLists(props) {
     else {
       setCollections(JSON.parse(localStorage.getItem("collections")))
     }
-  },[add])
+  },[add, itemId, setCollections])
 
   return (
   <div>
