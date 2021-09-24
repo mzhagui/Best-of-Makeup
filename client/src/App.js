@@ -12,10 +12,8 @@ import Edit from "./components/Edit"
 import Collection from './components/Collection';
 import {useState} from 'react'
  
-
 // const KEY = process.env.REACT_APP_AIRTABLE_KEY;
 // const BASE = process.env.REACT_APP_AIRTABLE_BASE;
-
 
 function App() {
   const [collections, setCollections] = useState([])
@@ -41,7 +39,7 @@ function App() {
 <Route path="/makeup/products/:id/edit">  
     <Edit/>
       </Route>
-<Route path="/Collection">
+<Route exact path="/Collection">
         <Collection collections={collections}
           setCollections={setCollections}/>
 </Route>

@@ -5,11 +5,9 @@ import { Link} from 'react-router-dom'
 import './MakeupLists.css'
 import Delete from "./Delete"
 
-
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
 const URL = `https://api.airtable.com/v0/${airtableBase}/BestofMakeup`
-
 
 const config = {
   headers: {
@@ -27,16 +25,19 @@ export default function MakeupLists(props) {
   const [itemId, setItemId] = useState("")
   useEffect(() => {
     const listofMakeup = async () => {
-      const res = await axios.get(URL, config);   
-     setCategoryList(res.data.records.filter((list) => list.fields.Category === products ? list : ""))
+      const res = await axios.get(URL, config);
+      setCategoryList(res.data.records.filter((list) => list.fields.Category === products ? list : ""))
     };
 
     listofMakeup();
   }, [deleted, products]);
-  const handleCollection = (id)=> {
+  const handleCollection = (id) => {
     setAdd(prevState => !prevState)
     setItemId(id)
+    alert("The item was added to My Collection")
   }
+     
+
   useEffect(() => {
     const fetchItem = async () => {
       const res = await axios.get(`${URL}/${itemId}`, config);
@@ -75,20 +76,12 @@ export default function MakeupLists(props) {
                     setDeleted={setDeleted}
                     id={item.id}
                     category={item.fields?.Category} />
-              {/* <Link to={`/Collection/${item.id}`}  */}
               <div onClick={()=> handleCollection(item.id)}><i className="fas fa-star"></i></div>
-              {/* <
-                
-             ></Link>
-        */}
           </div>
           </div>
-        );
-
-      })}
-        
+        )
+      })}   
       </div>
-      
       </div>
   )}
 

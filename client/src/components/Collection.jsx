@@ -1,46 +1,7 @@
-import { useState, useEffect } from 'react'
-import { useParams } from 'react-router'
-import axios from 'axios'
 import './Collection.css'
 
-const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
-const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
-const URL = `https://api.airtable.com/v0/${airtableBase}/BestofMakeup`
-
-const config = {
-  headers: {
-    Authorization: `Bearer ${airtableKey}`,
-  },
-};
-
 export default function Collection(props) {
-  // const [collections, setCollections] = useState([])
-  const { collections, setCollections }= props
-// const params = useParams()
-
-  // useEffect(() => {
-  //   const fetchItem = async () => {
-  //     const res = await axios.get(`${URL}/${params.id}`, config);
-  //     if (localStorage.getItem("collections")) {
-  //       const collectionArray = [...JSON.parse(localStorage.getItem("collections")),res.data.fields]
-  //       localStorage.setItem("collections", JSON.stringify(collectionArray))
-  //     } else {
-  //       localStorage.setItem("collections", JSON.stringify([res.data.fields]))
-  //     }
-  //     setCollections(JSON.parse(localStorage.getItem("collections")))
-  //   };
-    
-  //   if (params.id) {
-  //     fetchItem() 
-  //   }
-  //   else {
-  //     setCollections(JSON.parse(localStorage.getItem("collections")))
-  //   }
-  // },[params])
-
-  // function handleErase(e) {
-  //   e.preventDefault(); 
-  // }
+  const { collections }= props
 
   return (
     <div>
@@ -51,7 +12,6 @@ export default function Collection(props) {
           <div className="fav-image-container">
             <img className="favorites-image" src={product?.imageURL}/>
             </div>
-          {/* <button onClick={handleErase}className="far fa-trash-alt">Delete</button> */}
   </div>
       ))
       }
