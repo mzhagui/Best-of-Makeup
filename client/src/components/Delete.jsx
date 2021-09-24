@@ -11,8 +11,6 @@ const config = {
 };
 
 export default function Delete(props) {
-
-  
   const handleDelete = async () => {
     await deleteList(props.id)
     props.setDeleted(prevState=>!prevState)

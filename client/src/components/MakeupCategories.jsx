@@ -64,15 +64,6 @@ export default function MakeupCategories() {
       <Link to="/makeup/Lipstick"><img src={lipstick} alt="Lipstick"/></Link>
         <p>Lipstick</p>
       </div>
-
-      
-      
-
-      
-
-      
-     
-     
     </div>
   )
 }

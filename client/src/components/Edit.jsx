@@ -4,11 +4,9 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useHistory } from 'react-router';
 
-
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
 const URL = `https://api.airtable.com/v0/${airtableBase}/BestofMakeup`
-
 
 const config = {
   headers: {
@@ -34,8 +32,7 @@ export default function EditTeam() {
       setReview(fields.review)
       setimageURL(fields.imageURL)
       setCategory(fields.Category)
-     
-    };
+      };
     fetchMakeup();
   }, [id]);
 
@@ -47,7 +44,6 @@ export default function EditTeam() {
       review,
       imageURL,
       Category,
-     
     }
 
     const res = await axios.put(`${URL}/${id}`, { fields }, config)
@@ -59,8 +55,7 @@ export default function EditTeam() {
       <h1>Make some changes to your product.</h1>
       <br/>
       <form onSubmit={handleSubmit}>
-   
-      <label>Product Name:</label>
+   <label>Product Name:</label>
         <input type="text"
           autoFocus
           placeholder=" Enter Product Name"
@@ -92,8 +87,7 @@ export default function EditTeam() {
         />
         <br />
         <button className="edit-button">Save</button>
-      </form>
-      
+      </form>  
     </div>
   )
 }
