@@ -9,7 +9,7 @@ console.log(collections)
       <h1 className="header-fav"> MY COLLECTION </h1>
         {collections?.map((product, index) => {
           return (
-            <div key={index}>
+            <div className-="fav-div"key={index}>
               <h1 className="favorites-h1">{product?.productName}</h1>
               <div className="fav-image-container">
                 <img className="favorites-image" src={product?.imageURL} alt="favimage" />

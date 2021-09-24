@@ -17,7 +17,7 @@ const config = {
 
 export default function Create() {
   const [productName, setproductName] = useState("")
-  const [rating, setRating] = useState(0)
+  const [rating, setRating] = useState("")
   const [review, setReview] = useState("")
   const [imageURL, setimageURL] = useState("")
   const [Category, setCategory] = useState("")
@@ -69,9 +69,10 @@ export default function Create() {
     <label>Rating:</label>
         <input type="number"
           value={rating}
+          placeholder=" Rating 0 - 5"
           min="0"
           max="5"
-          placeholder="Rating 0 - 5"
+          placeholder=" Rating 0 - 5"
           onChange={(e) => setRating(e.target.valueAsNumber)}
         />
         <br />

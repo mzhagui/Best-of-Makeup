@@ -1,6 +1,7 @@
 .details-container{
   display: flex;
   height:70vh ;
+  justify-content: center;
   
 }
 
@@ -38,7 +39,7 @@
   text-align: center;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
- margin-left: 25px;
+ 
   
 }
 
@@ -47,11 +48,12 @@
   padding-bottom: 15px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  margin-left: 25px;
+  
 }
 .review{
 font-family: 'Poppins', sans-serif;
-margin-left: 40px;
+margin-left: 10px;
+text-align: center;
 }
 
 
@@ -62,8 +64,10 @@ margin-left: 40px;
   .imagedetail{
     width: 200px;
     height:200px;
-    margin-left: 80px;
+    margin-left: 100px;
+   
   }
+
 }
 
 

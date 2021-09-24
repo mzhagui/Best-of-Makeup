@@ -2,15 +2,17 @@
 .favorites-image{
   width: 300px;
   height: 300x;
-  
 }
 
 .favorites-h1{
   font-family: 'Poppins', sans-serif;
+  margin-left: 20px;
 }
 
 .header-fav{
   text-align: center;
   margin-bottom: 15px;
   font-size: 20px;
+ 
 }
+
