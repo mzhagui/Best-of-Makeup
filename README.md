@@ -45,7 +45,10 @@ Airtable is returning the data for this base as follows:
             "createdTime": "2021-09-16T22:08:34.000Z"
         },
 ,,,
-### MVP/PostMVP
+
+
+
+ ## MVP/PostMVP
 
 #### MVP
 
@@ -81,7 +84,8 @@ Airtable is returning the data for this base as follows:
 | Data population pg 3      |    H     |      2hrs      |     2hrs      |    2hrs     |
 | Data population pg 3      |    H     |      3hrs      |     2hrs      |    2hrs     |
 | Data population pg 4      |    H     |      2hrs      |     2hrs      |    2hrs     |
-| Form creation pg 1        |    H     |      2hrs      |     1 hr      |    1hr      | | Component CSS pg 1        |    H     |      2 hr      |     2hrs      |    2hrs     |
+| Form creation pg 1        |    H     |      2hrs      |     1 hr      |    1hr      |   
+| Component CSS pg 1        |    H     |      2 hr      |     2hrs      |    2hrs     |
 | Component CSS pg 2        |    H     |      3hrs      |     4hrs      |    4hrs     |
 | Component CSS pg 3        |    H     |      3hrs      |     4hrs      |    4hrs     |
 | Component CSS pg 4        |    H     |      3hrs      |     4hrs      |    4hrs     |
