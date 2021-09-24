@@ -4,7 +4,7 @@
   
 }
 
-@media only screen and (max-width:375px) {
+@media only screen and (max-width:500px) {
   .details-container{
   display: grid;
   justify-content: 50% auto;
@@ -55,7 +55,7 @@ margin-left: 40px;
 }
 
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 500px) {
   .review {
     margin-right: 20px;
   }
@@ -66,8 +66,7 @@ margin-left: 40px;
   }
 }
 
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-}
+
 
 
 

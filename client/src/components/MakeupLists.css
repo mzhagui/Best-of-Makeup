@@ -19,7 +19,7 @@
  
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 500px) {
   .makeup {
     display: grid;
     grid-template-columns: 50% auto;
@@ -82,5 +82,4 @@
 }
 
 
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-}
+

@@ -41,12 +41,10 @@ li {
   justify-content: space-evenly;
   row-gap: 100px;
   column-gap: 100px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
   margin-bottom: 110px;
 }
-
-
 
 .homebutton {
   display: grid;
@@ -58,15 +56,16 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-70%, 300%);
+  padding: 5px 10px 10px;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 500px) {
   .icons {
     display: grid;
     grid-template-columns: 20% auto;
   }
-}
-
-
-@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-}
+  .h1{
+    margin-bottom: 20px;
+  }
+  
+  }
