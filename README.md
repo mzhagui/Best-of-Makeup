@@ -23,30 +23,7 @@ https://airtable.com/shrTv92TftYf4SVZZ
 
 Airtable is returning the data for this base as follows:
 
-```
-{
-            "id": "recdDSCCFqB3kNbXF",
-            "fields": {
-                "productName": "Airspun Loose Face Powder",
-                "Category": "Powder",
-                "review": "Best translucent powder. Full day coverage.",
-                "rating": 5
-            },
-            "createdTime": "2021-09-16T22:08:34.000Z"
-        },
-        {
-            "id": "recp4xgK1dWzbJoH3",
-            "fields": {
-                "Category": "Primer",
-                "productName": "Maybelline Face Studio Master Prime Primer",
-                "rating": 4,
-                "review": "Covers pores, awesome primer. Good for combination skin (oily and dry skin) "
-            },
-            "createdTime": "2021-09-16T22:08:34.000Z"
-        },
-,,,
-
-
+![imageAlt](https://imgur.com/wkE2q1V.png)
 
  ## MVP/PostMVP
 
@@ -58,8 +35,10 @@ Airtable is returning the data for this base as follows:
 
 #### PostMVP
 
--Edit / Delete Button
-- Include My Favorites/ My Collection page
+- Include My Favorites/ My Collection page  
+- Edit / Delete Buttons
+
+
 
 ## Project Schedule
 
@@ -99,13 +78,16 @@ Airtable is returning the data for this base as follows:
 
 I can visualize my app and what I want the visuals to look like. Also I can visualize the functionality of my app.
 
+
 ### Weaknesses:
 
 Will mostly use state components compared to props. Still a little mixed up over the two, but I will overcome it.
 
+
 ### Opportunities:
 
 Motivated to continue builing my portfolio. This project can teach me using the foundations we learned and applying it to real life apps.
+
 
 ### Threats:
 
