@@ -69,7 +69,6 @@ export default function Create() {
     <label>Rating:</label>
         <input type="number"
           value={rating}
-          placeholder=" Rating 0 - 5"
           min="0"
           max="5"
           placeholder=" Rating 0 - 5"
