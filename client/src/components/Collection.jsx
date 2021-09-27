@@ -4,7 +4,7 @@ export default function Collection(props) {
   const { collections }= props
   return (
     <div>
-<div className="fav-container">
+      <div className="fav-container">
         <h1 className="header-fav"> MY COLLECTION </h1>
         <h2 className="bring-this">Bring these favorites, the next time you go shopping.</h2>
         {collections?.map((product, index) => {

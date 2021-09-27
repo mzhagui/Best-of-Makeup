@@ -92,3 +92,9 @@ Motivated to continue builing my portfolio. This project can teach me using the 
 ### Threats:
 
 Lose a lot of time not asking for help.
+
+
+### Code Snippets:
+I was able to filter out each product by its category. This helped me a lot to create a category page and the functionality of my app.
+![imageAlt](https://imgur.com/S2u8J74.png)
+
