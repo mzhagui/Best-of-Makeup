@@ -3,7 +3,6 @@ import axios from 'axios'
 import { useHistory } from "react-router";
 import './Create.css'
 
-
 const airtableBase = process.env.REACT_APP_AIRTABLE_BASE;
 const airtableKey = process.env.REACT_APP_AIRTABLE_KEY;
 const URL = `https://api.airtable.com/v0/${airtableBase}/BestofMakeup`;

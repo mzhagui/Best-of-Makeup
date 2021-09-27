@@ -11,7 +11,6 @@ import Edit from "./components/Edit"
 import Collection from './components/Collection';
 import {useState} from 'react'
  
-
 function App() {
   const [collections, setCollections] = useState(JSON.parse(localStorage.getItem("collections")))
   return (
