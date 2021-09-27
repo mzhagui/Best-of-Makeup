@@ -1,7 +1,8 @@
 import './Collection.css'
 
 export default function Collection(props) {
-  const { collections }= props
+  const { collections } = props
+ 
   return (
     <div>
       <div className="fav-container">
