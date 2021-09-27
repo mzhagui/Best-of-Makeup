@@ -4,14 +4,11 @@ import './Collection.css'
 
 export default function Collection(props) {
   const { collections } = props
-  
-  function deleteFav(index)
-  {
-    collections.splice(index, 1);
+  function deleteFav(index) 
+  {collections.splice(index, 1);
     localStorage.setItem('collections', JSON.stringify(collections));
-
   };
-  
+   
   
   return (
     <div>
