@@ -37,8 +37,8 @@ function App() {
     <Edit/>
       </Route>
 <Route exact path="/Collection">
-        <Collection collections={collections}
-          setCollections={setCollections}/>
+    <Collection collections={collections}
+      setCollections={setCollections}/>
 </Route>
       <Footer />
     </div>
