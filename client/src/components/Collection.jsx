@@ -1,8 +1,18 @@
 import './Collection.css'
 
+
+
 export default function Collection(props) {
   const { collections } = props
- 
+  
+  function deleteFav(index)
+  {
+    collections.splice(index, 1);
+    localStorage.setItem('collections', JSON.stringify(collections));
+
+  };
+  
+  
   return (
     <div>
       <div className="fav-container">
@@ -14,6 +24,7 @@ export default function Collection(props) {
               <h1 className="favorites-h1">{product?.productName}</h1>
               <div className="fav-image-container">
                 <img className="favorites-image" src={product?.imageURL} alt="favimage" />
+                  <button className="far fa-trash-alt" onClick={(() => { (deleteFav(index)) })}></button>    
               </div>
             </div>
           )
