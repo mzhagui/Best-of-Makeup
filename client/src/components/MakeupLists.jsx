@@ -69,7 +69,7 @@ export default function MakeupLists(props) {
         return (
           <div className="makeupcontainer" key={item.id}>
             <Link to={`/makeup/products/${item.id}`}> <img className="image" src={item.fields?.imageURL} alt="aproduct"/> </Link>
-            <h1 className="listh1">{item.fields.productName}</h1>
+            <h1 className="list-h1">{item.fields.productName}</h1>
             <div className="edit-delete">
             <Link to={`/makeup/products/${item.id}/edit`} className="fas fa-edit"></Link>
             <Delete

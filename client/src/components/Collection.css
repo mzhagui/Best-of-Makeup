@@ -10,7 +10,14 @@
 
 .header-fav{
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-size: 20px; 
+}
+
+.bring-this{
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 25px;
 }
 
