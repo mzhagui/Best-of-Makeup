@@ -16,7 +16,6 @@ const config = {
 };
 
 export default function MakeupLists(props) {
-  
   const [categoryList, setCategoryList] = useState([])
   const { products } = useParams()
   const [deleted, setDeleted] = useState(false)
